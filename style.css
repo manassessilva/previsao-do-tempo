@@ -1,3 +1,11 @@
+:root {
+    --background-card-color: #212121;
+    --text-color: #F6F6F6;
+    --search-color: #F6F6F6;
+
+    --font-family: "Popins", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,32 +15,102 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-image: url("./assets/dark-blue-sky.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 20%;
-    padding: 40px;
-    border-radius: 20px;
-    background-color: #0C0C0C;
+    gap: 30px;
+    width: 23%;
+    padding: 30px;
+    border-radius: 18px;
+    filter: drop-shadow(1px 1px 50px #4f4f4f);
+    background-color: var(--background-card-color);
 }
 
 .card_content_search {
     display: flex;
-    gap: 20px;
-    color: #fff;
+    gap: 15px;
+}
+
+.card_content_search_bar {
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 10px;
+    width: 82%;
+    background-color: var(--search-color);
+}
+
+.card_content_search_bar::placeholder {
+    font-family: "Popins", sans-serif;
+    font-weight: 400;
+    color: var(--background-card-color);
+}
+
+.card_content_search_button {
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    width: 13%;
+    cursor: pointer;
+    background-color: var(--search-color);
+}
+
+.card_content_search_button:hover {
+    background-color: #656565;
+    transition: 0.5s ease;
+    scale: 1.1;
+}
+
+.card_content_search_button svg {
+    width: 25px;
+}
+
+.card_content_search_button:hover svg path{
+    fill: var(--search-color);
+    transition: 0.5s ease;
 }
 
 .card_content_legend {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-top: 30px;
-    color: #fff;
+}
+
+.card_content_legend_title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.card_content_legend_temperature {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content_legend_weather {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content_legend_description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
 }
