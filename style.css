@@ -19,7 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("./assets/dark-blue-sky.jpg");
+    background-image: url("https://source.unsplash.com/1600x900?nature");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;

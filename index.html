@@ -6,6 +6,7 @@
     <title>Previsão do Tempo</title> <!--Título da página-->
     <link rel="stylesheet" href="./assets/ms_logo.png"> <!--Icone da página-->
 
+    <!--Importação da estilização CSS-->
     <link rel="stylesheet" href="./style.css">
 
     <!--Link da fonte do texto-->
@@ -15,12 +16,17 @@
     wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,
     wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+    <!--Importação do JavaScript-->
+    <script src="script.js"></script>
+
 </head>
 <body id="body">
     <main class="card">
         <section class="card_content_search">
             <input class="card_content_search_bar" type="text" placeholder="Digite o nome da cidade">
-            <button class="card_content_search_button">
+
+            <!--O "onclick" está chamando a função para armazenar o nome da cidade inserida no input-->
+            <button class="card_content_search_button" onclick="aoClicarNoBotão()">
                 <svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" viewBox="0 0 256 256">
                     <path fill="#212121" d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
                 </svg>
@@ -33,5 +39,6 @@
             <p class="card_content_legend_description">Umidade 70%</p>
         </section>
     </main>
+
 </body>
 </html>
