@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previsão do Tempo</title> <!--Título da página-->
-    <link rel="stylesheet" href="./assets/ms_logo.png"> <!--Icone da página-->
+    <link rel="icon" href="./assets/page-icon.svg"> <!--Icone da página-->
 
     <!--Importação da estilização CSS-->
     <link rel="stylesheet" href="./style.css">
@@ -32,12 +32,32 @@
                 </svg>
             </button>
         </section>
+
+        <h1 class="card_content_title">Tempo em...</h1>
+
         <section class="card_content_legend">
-            <h1 class="card_content_legend_title">Tempo em...</h1>
-            <div class="card_content_legend_temperature">
-                <img src="./assets/thermometer.svg" alt="icone de termometro">
-                <p class="card_content_legend_temperature_info">21°C</p>
+            <div class="card_content_legend_temp">
+                <span>Temperatura:</span>
+                <div class="legend_temperature">
+                    <img src="./assets/thermometer.svg" alt="icone de termometro">
+                    <p class="card_content_legend_temperature_info">21°C</p>
+                </div>
             </div>
+            
+            <div class="card_content_legend_grup">
+                <div class="legend_temperature_max">
+                    <img src="./assets/thermometer-max.svg" alt="icone de termometro quente">
+                    <p class="legend_temperature_max_tex"><span>Max: </span>25°C</p>
+                </div>
+
+                <div class="legend_temperature_min">
+                    <img src="./assets/thermometer-min.svg" alt="icone de termometro quente">
+                    <p class="legend_temperature_min_text"><span>Min: </span>18°C</p>
+                </div>
+            </div>
+            
+        </section>
+        <section class="card_content_cloud">
             <div class="card_content_legend_weather">
                 <img class="card_content_legend_img" src="./assets/cloud-icon.svg" alt="icone do tempo">
                 <p class="card_content_legend_weather_info">Névoa</p>
@@ -47,7 +67,13 @@
                 <p class="card_content_legend_description_info">Umidade 70%</p>
             </div>
         </section>
+
     </main>
+    <footer class="baseboard">
+        <div class="baseboard_content">
+            <p class="baseboard_content_text">desenvolvido por Manasses Silva</p>
+        </div>
+    </footer>
 
 </body>
 </html>

@@ -18,10 +18,11 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("https://source.unsplash.com/1600x900?nature");
+    background-image: url('https://source.unsplash.com/1600x900/?weather');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -33,7 +34,7 @@ body {
     justify-content: center;
     gap: 30px;
     width: 25%;
-    padding: 16px;
+    padding: 24PX 16px 16px 16px;
     border-radius: 24px;
     background-color: var(--background-card-color);
 }
@@ -78,20 +79,58 @@ body {
     width: 25px;
 }
 
-.card_content_legend {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card_content_legend_title {
+.card_content_title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--text-color);
 }
 
-.card_content_legend_temperature {
+.card_content_legend {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #403a3a;
+}
+
+.card_content_legend_temp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid var(--search-button-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.legend_temperature {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.card_content_legend_grup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--search-button-color);
+}
+
+.legend_temperature_max {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -99,6 +138,22 @@ body {
     font-weight: 400;
     font-size: 1rem;
     color: var(--text-color);
+}
+
+.legend_temperature_min {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content_cloud {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .card_content_legend_weather {
@@ -113,7 +168,7 @@ body {
 }
 
 .card_content_legend_img {
-    width: 50px;
+    width: 40px;
 }
 
 .card_content_legend_description {
@@ -124,6 +179,21 @@ body {
     font-weight: 400;
     font-size: 1rem;
     color: var(--text-color);
+}
+
+.baseboard {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--text-color);
+    padding: 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--background-card-color);
 }
 
 /*Responsividade Monitores*/

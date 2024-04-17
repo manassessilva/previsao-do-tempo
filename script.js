@@ -1,8 +1,11 @@
+//Função para alterar os dados do cartão
 function colocarDadosNaTela(dados) {
 
   console.log(dados)
-  document.querySelector(".card_content_legend_title").innerHTML = "Tempo em " + dados.name
+  document.querySelector(".card_content_title").innerHTML = "Tempo em " + dados.name
   document.querySelector(".card_content_legend_temperature_info").innerHTML = Math.floor(dados.main.temp) + "°C"
+  document.querySelector(".legend_temperature_max_tex").innerHTML = "Max: " + Math.floor(dados.main.temp_max) + "°C"
+  document.querySelector(".legend_temperature_min_text").innerHTML = "Min: " + Math.floor(dados.main.temp_min) + "°C"
   document.querySelector(".card_content_legend_weather_info").innerHTML = dados.weather[0].description
   document.querySelector(".card_content_legend_description_info").innerHTML = "Umidade " + dados.main.humidity + "%"
   document.querySelector(".card_content_legend_img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
