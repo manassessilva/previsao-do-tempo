@@ -1,7 +1,11 @@
 :root {
-    --background-card-color: #212121;
-    --text-color: #F6F6F6;
-    --search-color: #F6F6F6;
+    --background-card-color: #191717;
+    --text-color: #FEFCF3;
+    --search-bar-color: #F6F6F6;
+    --search-bar-text-color: #7D7C7C;
+    --search-button-color: #5755FE;
+    --search-button-color-hover: #8B93FF;
+    --search-button-color-hover-svg: #212121;
 
     --font-family: "Popins", sans-serif;
 }
@@ -12,10 +16,8 @@
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -30,16 +32,15 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-    width: 23%;
-    padding: 30px;
-    border-radius: 18px;
-    filter: drop-shadow(1px 1px 50px #4f4f4f);
+    width: 25%;
+    padding: 16px;
+    border-radius: 24px;
     background-color: var(--background-card-color);
 }
 
 .card_content_search {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
 }
 
 .card_content_search_bar {
@@ -47,38 +48,34 @@ body {
     border-radius: 8px;
     outline: none;
     padding: 10px;
-    width: 82%;
-    background-color: var(--search-color);
+    width: 80%;
+    background-color: var(--search-bar-color);
+    font-family: var(--font-family);
+    font-weight: 400;
 }
 
 .card_content_search_bar::placeholder {
     font-family: "Popins", sans-serif;
     font-weight: 400;
-    color: var(--background-card-color);
+    color: var(--search-bar-text-color);
 }
 
 .card_content_search_button {
     border: none;
-    border-radius: 50%;
     outline: none;
-    width: 13%;
     cursor: pointer;
-    background-color: var(--search-color);
+    width: 15%;
+    border-radius: 8px;
+    background-color: var(--search-button-color);
 }
 
 .card_content_search_button:hover {
-    background-color: #656565;
-    transition: 0.5s ease;
-    scale: 1.1;
+    background-color: var(--search-button-color-hover);
+    transition: 0.3s ease;
 }
 
 .card_content_search_button svg {
     width: 25px;
-}
-
-.card_content_search_button:hover svg path{
-    fill: var(--search-color);
-    transition: 0.5s ease;
 }
 
 .card_content_legend {
@@ -95,6 +92,9 @@ body {
 }
 
 .card_content_legend_temperature {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
@@ -102,6 +102,9 @@ body {
 }
 
 .card_content_legend_weather {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
@@ -109,7 +112,14 @@ body {
     text-transform: capitalize;
 }
 
+.card_content_legend_img {
+    width: 50px;
+}
+
 .card_content_legend_description {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;

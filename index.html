@@ -23,20 +23,29 @@
 <body id="body">
     <main class="card">
         <section class="card_content_search">
-            <input class="card_content_search_bar" type="text" placeholder="Digite o nome da cidade">
+            <input class="card_content_search_bar" type="text" placeholder="Digite o nome da cidade" required>
 
             <!--O "onclick" está chamando a função para armazenar o nome da cidade inserida no input-->
             <button class="card_content_search_button" onclick="aoClicarNoBotão()">
                 <svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" viewBox="0 0 256 256">
-                    <path fill="#212121" d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+                    <path fill="#F6F6F6" d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
                 </svg>
             </button>
         </section>
         <section class="card_content_legend">
-            <h1 class="card_content_legend_title">Tempo em Recife</h1>
-            <p class="card_content_legend_temperature">21°C</p>
-            <p class="card_content_legend_weather">Névoa</p>
-            <p class="card_content_legend_description">Umidade 70%</p>
+            <h1 class="card_content_legend_title">Tempo em...</h1>
+            <div class="card_content_legend_temperature">
+                <img src="./assets/thermometer.svg" alt="icone de termometro">
+                <p class="card_content_legend_temperature_info">21°C</p>
+            </div>
+            <div class="card_content_legend_weather">
+                <img class="card_content_legend_img" src="./assets/cloud-icon.svg" alt="icone do tempo">
+                <p class="card_content_legend_weather_info">Névoa</p>
+            </div>
+            <div class="card_content_legend_description">
+                <img src="./assets/humidity-icon.svg" alt="ícone de umidade do tempo">
+                <p class="card_content_legend_description_info">Umidade 70%</p>
+            </div>
         </section>
     </main>
 

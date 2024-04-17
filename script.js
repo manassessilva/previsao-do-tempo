@@ -2,9 +2,10 @@ function colocarDadosNaTela(dados) {
 
   console.log(dados)
   document.querySelector(".card_content_legend_title").innerHTML = "Tempo em " + dados.name
-  document.querySelector(".card_content_legend_temperature").innerHTML = Math.floor(dados.main.temp) + "°C"
-  document.querySelector(".card_content_legend_weather").innerHTML = dados.weather[0].description
-  document.querySelector(".card_content_legend_description").innerHTML = "Umidade " + dados.main.humidity + "%"
+  document.querySelector(".card_content_legend_temperature_info").innerHTML = Math.floor(dados.main.temp) + "°C"
+  document.querySelector(".card_content_legend_weather_info").innerHTML = dados.weather[0].description
+  document.querySelector(".card_content_legend_description_info").innerHTML = "Umidade " + dados.main.humidity + "%"
+  document.querySelector(".card_content_legend_img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
 
 }
 
