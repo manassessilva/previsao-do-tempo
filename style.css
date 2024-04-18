@@ -1,5 +1,6 @@
 :root {
     --background-card-color: #191717;
+    --background-card-content-color: #403a3a;
     --text-color: #FEFCF3;
     --search-bar-color: #F6F6F6;
     --search-bar-text-color: #7D7C7C;
@@ -32,19 +33,21 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 30px;
-    width: 25%;
+    align-items: center;
+    gap: 35px;
+    width: auto;
     padding: 24PX 16px 16px 16px;
     border-radius: 24px;
     background-color: var(--background-card-color);
 }
 
-.card_content_search {
+.card_search {
     display: flex;
     justify-content: space-between;
+    width: 50%;
 }
 
-.card_content_search_bar {
+.card_search_bar {
     border: none;
     border-radius: 8px;
     outline: none;
@@ -55,13 +58,13 @@ body {
     font-weight: 400;
 }
 
-.card_content_search_bar::placeholder {
+.card_search_bar::placeholder {
     font-family: "Popins", sans-serif;
     font-weight: 400;
     color: var(--search-bar-text-color);
 }
 
-.card_content_search_button {
+.card_search_button {
     border: none;
     outline: none;
     cursor: pointer;
@@ -70,37 +73,87 @@ body {
     background-color: var(--search-button-color);
 }
 
-.card_content_search_button:hover {
+.card_search_button:hover {
     background-color: var(--search-button-color-hover);
     transition: 0.3s ease;
 }
 
-.card_content_search_button svg {
+.card_search_button svg {
     width: 25px;
 }
 
-.card_content_title {
+.card_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.card_description_title {
     font-family: var(--font-family);
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--text-color);
 }
 
-.card_content_legend {
+.card_description_weather {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 16px;
-    border-radius: 8px;
-    background-color: #403a3a;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-transform: capitalize;
 }
 
-.card_content_legend_temp {
+.card_content_description_weather_img {
+    width: 40px;
+}
+
+.card_content_description_weather_info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card_content_legend {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
+    padding: 15px;
+    height: 100%;
+    border-radius: 8px;
+    background-color: var(--background-card-content-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content_legend_temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
     padding: 15px;
     border-bottom: 1px solid var(--search-button-color);
     font-family: var(--font-family);
@@ -109,7 +162,7 @@ body {
     color: var(--text-color);
 }
 
-.legend_temperature {
+.card_content_legend_temperature_current {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -122,15 +175,14 @@ body {
 .card_content_legend_grup {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 25px;
-    padding: 10px;
-    padding-bottom: 15px;
+    gap: 20px;
+    padding:25px;
     border-bottom: 1px solid var(--search-button-color);
 }
 
-.legend_temperature_max {
+.card_content_legend_group_temperature_max {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -140,7 +192,7 @@ body {
     color: var(--text-color);
 }
 
-.legend_temperature_min {
+.card_content_legend_group_temperature_min {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -150,37 +202,82 @@ body {
     color: var(--text-color);
 }
 
-.card_content_cloud {
+.card_content_legend_sensation {
+    text-align: center;
+    padding: 25px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content_air {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.card_content_legend_weather {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 5px;
+    padding: 15px;
+    height: 100%;
+    border-radius: 8px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
     color: var(--text-color);
-    text-transform: capitalize;
+    background-color: var(--background-card-content-color);
 }
 
-.card_content_legend_img {
-    width: 40px;
-}
-
-.card_content_legend_description {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.card_content_air_title {
+    width: 100%;
+    text-align: center;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
     color: var(--text-color);
 }
 
+.card_content_air_humidity {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 15px;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid var(--search-button-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content_air_pressure {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    width: 100%;
+    padding: 30px 0px;
+    border-bottom: 1px solid var(--search-button-color);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card_content_air_wind {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+ 
 .baseboard {
     font-family: var(--font-family);
     font-style: normal;

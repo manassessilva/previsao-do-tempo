@@ -20,55 +20,80 @@
     <script src="script.js"></script>
 
 </head>
-<body id="body">
-    <main class="card">
-        <section class="card_content_search">
-            <input class="card_content_search_bar" type="text" placeholder="Digite o nome da cidade" required>
 
-            <!--O "onclick" está chamando a função para armazenar o nome da cidade inserida no input-->
-            <button class="card_content_search_button" onclick="aoClicarNoBotão()">
+<body id="body">
+
+    <main class="card">
+
+        <header class="card_search">
+            <input class="card_search_bar" type="text" placeholder="Digite o nome da cidade" required>
+            
+            <button class="card_search_button" onclick="aoClicarNoBotão()">   <!--O "onclick" está chamando a função para armazenar o nome da cidade inserida no input-->
                 <svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" viewBox="0 0 256 256">
                     <path fill="#F6F6F6" d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
                 </svg>
             </button>
+        </header>
+
+        <section class="card_description">
+            <h1 class="card_description_title">Tempo em...</h1>
+
+            <div class="card_description_weather">
+                <img class="card_description_weather_img" src="./assets/cloud-icon.svg" alt="icone do tempo">
+                <p class="card_description_weather_info">Névoa</p>
+            </div>
         </section>
 
-        <h1 class="card_content_title">Tempo em...</h1>
+        <section class="card_content">
 
-        <section class="card_content_legend">
-            <div class="card_content_legend_temp">
+            <section class="card_content_legend">
                 <span>Temperatura:</span>
-                <div class="legend_temperature">
-                    <img src="./assets/thermometer.svg" alt="icone de termometro">
-                    <p class="card_content_legend_temperature_info">21°C</p>
+                <div class="card_content_legend_temperature">
+                    <div class="card_content_legend_temperature_current">
+                        <img src="./assets/thermometer.svg" alt="icone de termometro">
+                        <p class="card_content_legend_temperature_current_info">21°C</p>
+                    </div>
                 </div>
-            </div>
+                
+                <div class="card_content_legend_grup">
+                    <div class="card_content_legend_group_temperature_max">
+                        <img src="./assets/thermometer-max.svg" alt="icone de termometro quente">
+                        <p class="card_content_legend_group_temperature_max_info"><span>Max: </span>25°C</p>
+                    </div>
+    
+                    <div class="card_content_legend_group_temperature_min">
+                        <img src="./assets/thermometer-min.svg" alt="icone de termometro frio">
+                        <p class="card_content_legend_group_temperature_min_info"><span>Min: </span>18°C</p>
+                    </div>
+                </div>
+                
+                <div class="card_content_legend_sensation">
+                    <p class="card_content_legend_sensation_info">Sensação Térmica de 28°C</p>
+                </div>
+            </section>
             
-            <div class="card_content_legend_grup">
-                <div class="legend_temperature_max">
-                    <img src="./assets/thermometer-max.svg" alt="icone de termometro quente">
-                    <p class="legend_temperature_max_tex"><span>Max: </span>25°C</p>
+            <section class="card_content_air">
+                <span class="card_content_air_title">Ar e Vento: </span>
+                <div class="card_content_air_humidity">
+                    <img src="./assets/humidity-icon.svg" alt="ícone de gota d'água">
+                    <p class="card_content_air_info_humidity">Umidade 70%</p>
                 </div>
 
-                <div class="legend_temperature_min">
-                    <img src="./assets/thermometer-min.svg" alt="icone de termometro quente">
-                    <p class="legend_temperature_min_text"><span>Min: </span>18°C</p>
+                <div class="card_content_air_pressure">
+                    <img src="./assets/pressure-air-icon.svg" alt="icone de ventilação">
+                    <p class="card_content_air_info_pressure">Presão do Ar em 1008hPa</p>
                 </div>
-            </div>
-            
-        </section>
-        <section class="card_content_cloud">
-            <div class="card_content_legend_weather">
-                <img class="card_content_legend_img" src="./assets/cloud-icon.svg" alt="icone do tempo">
-                <p class="card_content_legend_weather_info">Névoa</p>
-            </div>
-            <div class="card_content_legend_description">
-                <img src="./assets/humidity-icon.svg" alt="ícone de umidade do tempo">
-                <p class="card_content_legend_description_info">Umidade 70%</p>
-            </div>
+
+                <div class="card_content_air_wind">
+                    <img src="./assets/wind-speed-icon.svg" alt="icone de ventilação">
+                    <p class="card_content_air_info_wind">Velocidade do vento em 5.14m/s</p>
+                </div>
+            </section>
+
         </section>
 
     </main>
+
     <footer class="baseboard">
         <div class="baseboard_content">
             <p class="baseboard_content_text">desenvolvido por Manasses Silva</p>
