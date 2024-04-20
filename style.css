@@ -309,7 +309,7 @@ body {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: var(--baseboard-background-color);
+    background-color: var(--baseboard-background-color); 
 }
 
 /*Responsividade Monitores*/
@@ -361,6 +361,7 @@ body {
     }
     .card {
         width: 80%;
+        align-items: center;
     }
 
     .card_search {
@@ -369,6 +370,10 @@ body {
 
     .card_content {
         flex-direction: column;
+    }
+
+    .card_content_air {
+        gap: 20px;
     }
 
     .baseboard {
@@ -389,14 +394,23 @@ body {
 
     .card {
         width: 80%;
+        align-items: center;
     }
 
-    .card_search {
+    .card_search_bar {
         width: 80%;
+    }
+
+    .card_search_button {
+        width: 15%;
     }
 
     .card_content {
         flex-direction: column;
+    }
+
+    .card_content_air {
+        gap: 20px;
     }
     
     .baseboard {
