@@ -14,10 +14,12 @@ function colocarDadosNaTela(dados) {
   document.querySelector(".card_content_legend_sensation_info").innerHTML = "Sensação Térmica de " + Math.floor(dados.main.feels_like) + "°C"
 
   //Dados sobre a humidade e vento
-  document.querySelector(".card_content_air_info _humidity").innerHTML = "Umidade " + dados.main.humidity + "%"
-  document.querySelector(".card_content_air_info_pressure").innerHTML = "Presão do Ar em " + dados.main.pressure + "hPa"
-  document.querySelector(".card_content_air_info_wind").innerHTML = "Velocidade do vento em " + dados.wind.speed + "m/s"
+  document.querySelector(".card_content_air_info_humidity").innerHTML = "Umidade " + Math.floor(dados.main.humidity) + "%"
+  document.querySelector(".card_content_air_info_pressure").innerHTML = "Presão do Ar em " + Math.floor(dados.main.pressure) + "hPa"
+  document.querySelector(".card_content_air_info_wind").innerHTML = "Velocidade do vento em " + Math.floor(dados.wind.speed) + "m/s"
 }
+
+
 
 //buscar as informações da cidade no servidor
 //Com o "async" o navegador executa a função de forma asincrona enquanto carrega as demais informações do site.

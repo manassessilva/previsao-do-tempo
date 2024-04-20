@@ -109,7 +109,7 @@ body {
     text-transform: capitalize;
 }
 
-.card_content_description_weather_img {
+.card_description_weather_img {
     width: 40px;
 }
 
@@ -139,6 +139,7 @@ body {
     gap: 15px;
     padding: 15px;
     height: 100%;
+    width: 100%;
     border-radius: 8px;
     background-color: var(--background-card-content-color);
     font-family: var(--font-family);
@@ -218,6 +219,7 @@ body {
     align-items: center;
     padding: 15px;
     height: 100%;
+    width: 100%;
     border-radius: 8px;
     font-family: var(--font-family);
     font-weight: 400;
@@ -276,7 +278,6 @@ body {
     font-size: 1rem;
     color: var(--text-color);
 }
-
  
 .baseboard {
     font-family: var(--font-family);
@@ -296,42 +297,91 @@ body {
 /*Responsividade Monitores*/
 @media (width >= 1600px) {
     .card {
-        width: 18%;
+        width: auto;
     }
 }
 
 /*Responsividade desktop*/
 @media (width <= 1200px) {
+    body {
+        gap: 20px;
+    }
+
     .card {
-        width: 40%;
+        width: auto;
     }
 }
 
 /*Responsividade tablet grandes*/
 @media (width <= 992px) {
     .card {
-        width: 50%;
+        width: auto;
     }
 }
 
 /*Responsividade tablets pequenos*/
 @media (width <= 768px) {
     .card {
-        width: 50%;
+        width: 80%;
     }
+
+    .card_search {
+        width: 80%;
+    }
+
 }
 
 /*Responsividade smartphones*/
 @media (width <= 576px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding-top: 50px;
+    }
     .card {
         width: 80%;
+    }
+
+    .card_search {
+        width: 80%;
+    }
+
+    .card_content {
+        flex-direction: column;
+    }
+
+    .baseboard {
+        position: relative;
     }
 }
 
 /*Responsividade dispositivos pequenos*/
 @media (width <= 400px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding-top: 50px;
+    }
+
     .card {
-        width: 100%;
-        scale: 0.8;
+        width: 80%;
+    }
+
+    .card_search {
+        width: 80%;
+    }
+
+    .card_content {
+        flex-direction: column;
+    }
+    
+    .baseboard {
+        position: relative;
     }
 }
