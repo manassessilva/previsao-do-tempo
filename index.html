@@ -21,72 +21,68 @@
 
 </head>
 
-<body id="body">
-
+<body>
+ 
     <main class="card">
-
         <header class="card_search">
             <input class="card_search_bar" type="text" placeholder="Digite o nome da cidade" required>
             
             <button class="card_search_button" onclick="aoClicarNoBotão()">   <!--O "onclick" está chamando a função para armazenar o nome da cidade inserida no input-->
-                <svg xmlns="http://www.w3.org/2000/svg"  width="32" height="32" viewBox="0 0 256 256">
+                <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" viewBox="0 0 256 256">
                     <path fill="#F6F6F6" d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
                 </svg>
             </button>
         </header>
 
-        <section class="card_description">
-            <h1 class="card_description_title">Tempo em...</h1>
-
-            <div class="card_description_weather">
-                <img class="card_description_weather_img" src="./assets/cloud-icon.svg" alt="icone do tempo">
-                <p class="card_description_weather_info">Névoa</p>
-            </div>
-        </section>
+        <h1 class="card_title">tempo em...</h1>
 
         <section class="card_content">
 
             <section class="card_content_legend">
-                <span>Temperatura:</span>
-                <div class="card_content_legend_temperature">
-                    <div class="card_content_legend_temperature_current">
-                        <img src="./assets/thermometer.svg" alt="icone de termometro">
-                        <p class="card_content_legend_temperature_current_info">21°C</p>
-                    </div>
-                </div>
+                
+                <p class="card_content_legend_temperature">25°C</p>
+                <img class="card_content_legend_weather_img" src="https://i.postimg.cc/Twj8bhpK/scattered-clouds-icon.png" alt="icone do tempo">
+                <p class="card_content_legend_weather_info">nuvens dispersas</p>
                 
                 <div class="card_content_legend_grup">
-                    <div class="card_content_legend_group_temperature_max">
-                        <img src="./assets/thermometer-max.svg" alt="icone de termometro quente">
-                        <p class="card_content_legend_group_temperature_max_info"><span>Max: </span>25°C</p>
-                    </div>
-    
-                    <div class="card_content_legend_group_temperature_min">
-                        <img src="./assets/thermometer-min.svg" alt="icone de termometro frio">
-                        <p class="card_content_legend_group_temperature_min_info"><span>Min: </span>18°C</p>
-                    </div>
-                </div>
-                
-                <div class="card_content_legend_sensation">
-                    <p class="card_content_legend_sensation_info">Sensação Térmica de 28°C</p>
+                    <p class="card_content_legend_group_temperature_max">
+                        <span>máx:</span>
+                        25°C
+                    </p>
+                    <p class="card_content_legend_group_temperature_min">
+                        <span>mín:</span>
+                        18°C
+                    </p>
+                    <p class="card_content_legend_group_sensation">
+                        <span>sensação:</span>
+                        28°C
+                    </p>
                 </div>
             </section>
-            
+
             <section class="card_content_air">
-                <span class="card_content_air_title">Ar e Vento: </span>
                 <div class="card_content_air_humidity">
-                    <img src="./assets/humidity-icon.svg" alt="ícone de gota d'água">
-                    <p class="card_content_air_info_humidity">Umidade 70%</p>
+                    <p class="card_content_air_humidity_text">
+                        umidade:
+                        <span class="card_content_air_humidity_info">70%</span>
+                    </p>
+                    <img class="card_content_air_humidity_img" src="./assets/humidity-icon.png" alt="ícone de gota d'água">
                 </div>
 
                 <div class="card_content_air_pressure">
-                    <img src="./assets/pressure-air-icon.svg" alt="icone de ventilação">
-                    <p class="card_content_air_info_pressure">Presão do Ar em 1008hPa</p>
+                    <p class="card_content_air_pressure_text">
+                        pressão do ar:
+                        <span class="card_content_air_pressure_info">1008hPa</span>
+                    </p>
+                    <img class="card_content_air_pressure_img" src="./assets/pressure-air-icon.png" alt="icone de ventilação">
                 </div>
 
                 <div class="card_content_air_wind">
-                    <img src="./assets/wind-speed-icon.svg" alt="icone de ventilação">
-                    <p class="card_content_air_info_wind">Velocidade do vento em 5.14m/s</p>
+                    <p class="card_content_air_wind_text">
+                        vel. do vento:
+                        <span class="card_content_air_wind_info">5.14m/s</span>
+                    </p>
+                    <img class="card_content_air_wind_img" src="./assets/wind-speed-icon.png" alt="icone de ventilação">
                 </div>
             </section>
 

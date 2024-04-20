@@ -3,20 +3,87 @@ function colocarDadosNaTela(dados) {
 
   //Dados principais
   console.log(dados)
-  document.querySelector(".card_description_title").innerHTML = "Tempo em " + dados.name
-  document.querySelector(".card_description_weather_info").innerHTML = dados.weather[0].description
-  document.querySelector(".card_description_weather_img").src = `https://openweathermap.org/img/wn/${dados.weather[0].icon}.png`
+  document.querySelector(".card_title").innerHTML = "tempo em " + dados.name
+  document.querySelector(".card_content_legend_weather_info").innerHTML = dados.weather[0].description
+  let icon = dados.weather[0].icon;
+  switch (icon) {
+      case "01d":
+        document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/rpZYWMw1/clear-sky-icon.png";
+        break;
+      case "01n":
+        document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/DytvQ38K/clear-sky-nigth-icon.png";
+        break;
+      case "02d":
+        document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/t42S6WqZ/few-clouds-icon.png";
+        break;
+      case "02n":
+        document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/FFwg2GRV/few-clouds-night-icon.png";
+        break;
+      case "02n":
+        document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/FFwg2GRV/few-clouds-night-icon.png";
+        break;
+      case "03d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/Twj8bhpK/scattered-clouds-icon.png";
+      break;
+      case "03n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/L4zfqSDG/scattered-clouds-night-icon.png";
+      break;
+      case "04d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/Twj8bhpK/scattered-clouds-icon.png";
+      break;
+      case "04n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/L4zfqSDG/scattered-clouds-night-icon.png";
+      break;
+      case "09d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/c48XDCRC/bath-rain-icon.png";
+      break;
+      case "09n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/SNhj2txs/bath-rain-night-icon.png";
+      break;
+      case "10d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/c48XDCRC/bath-rain-icon.png";
+      break;
+      case "10n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/bwv6PgbC/rain-night-icon.png";
+      break;
+      case "11d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/kG0tHnQP/thunderstorm-icon.png";
+      break;
+      case "11n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/KzcwHTFB/thunderstorm-night-icon.png";
+      break;
+      case "13d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/zfy0bkJd/snow-icon.png";
+      break;
+      case "13n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/VvP8H6G8/snow-night-icon.png";
+      break;
+      case "13d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/zfy0bkJd/snow-icon.png";
+      break;
+      case "13n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/VvP8H6G8/snow-night-icon.png";
+      break;
+      case "50d":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/3wjVJB9P/mist-icon.png";
+      break;
+      case "50n":
+          document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/3wjVJB9P/mist-icon.png";
+      break;
+      default:
+        console.log("Ícone não encontrado");
+  }
 
   //Dados sobre a temperatura
-  document.querySelector(".card_content_legend_temperature_current_info").innerHTML = Math.floor(dados.main.temp) + "°C"
-  document.querySelector(".card_content_legend_group_temperature_max_info").innerHTML = "Max: " + Math.floor(dados.main.temp_max) + "°C"
-  document.querySelector(".card_content_legend_group_temperature_min_info").innerHTML = "Min: " + Math.floor(dados.main.temp_min) + "°C"
-  document.querySelector(".card_content_legend_sensation_info").innerHTML = "Sensação Térmica de " + Math.floor(dados.main.feels_like) + "°C"
+  document.querySelector(".card_content_legend_temperature").innerHTML = Math.floor(dados.main.temp) + "°C"
+  document.querySelector(".card_content_legend_group_temperature_max").innerHTML = "Máx: " + Math.floor(dados.main.temp_max) + "°C"
+  document.querySelector(".card_content_legend_group_temperature_min").innerHTML = "Mín: " + Math.floor(dados.main.temp_min) + "°C"
+  document.querySelector(".card_content_legend_group_sensation").innerHTML = "Sensação: " + Math.floor(dados.main.feels_like) + "°C"
 
   //Dados sobre a humidade e vento
-  document.querySelector(".card_content_air_info_humidity").innerHTML = "Umidade " + Math.floor(dados.main.humidity) + "%"
-  document.querySelector(".card_content_air_info_pressure").innerHTML = "Presão do Ar em " + Math.floor(dados.main.pressure) + "hPa"
-  document.querySelector(".card_content_air_info_wind").innerHTML = "Velocidade do vento em " + Math.floor(dados.wind.speed) + "m/s"
+  document.querySelector(".card_content_air_humidity_info").innerHTML = Math.floor(dados.main.humidity) + "%"
+  document.querySelector(".card_content_air_pressure_info").innerHTML = Math.floor(dados.main.pressure) + "hPa"
+  document.querySelector(".card_content_air_wind_info").innerHTML = Math.floor(dados.wind.speed) + "m/s"
 }
 
 
