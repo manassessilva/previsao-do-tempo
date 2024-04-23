@@ -28,8 +28,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 | ----------------- | ---------------------------------------------------------------- |
 | Cor background    | ![#E4E4E4](https://via.placeholder.com/10/E4E4E4?text=+) #E4E4E4 |
 | Cor princiapal    | ![#4574DA](https://via.placeholder.com/10/4574DA?text=+) #4574DA |
-| Cor secundaria    | ![#4e84f8](https://via.placeholder.com/10/4e84f8?text=+) #00b48a |
-| Cor do texto      | ![#545454](https://via.placeholder.com/10/545454?text=+) #00d1a0 |
+| Cor secundaria    | ![#4e84f8](https://via.placeholder.com/10/4e84f8?text=+) #4E84F8 |
+| Cor do texto      | ![#545454](https://via.placeholder.com/10/545454?text=+) #545454 |
 
 <br>
 

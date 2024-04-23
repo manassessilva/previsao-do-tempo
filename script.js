@@ -1,14 +1,47 @@
-//Função para alterar os dados do cartão
-function colocarDadosNaTela(dados) {
+//função para adicionar 
 
-  //Dados principais
+//Função para alterar dados por do sol
+function colocarPorDoSolNaTela(dados) {
+
+  let date = new Date(dados.sys.sunset * 1000);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let time = hours + ":" + minutes;
+
+  document.querySelector(".card_content_sunset_info").innerHTML = time;
+} 
+
+//Função para alterar dados nascer do sol
+function colocarNascerDoSolNaTela(dados) {
+
+  let date = new Date(dados.sys.sunrise * 1000);
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let time = hours + ":" + minutes;
+
+  document.querySelector(".card_content_sunrise_info").innerHTML = time;
+} 
+
+//Função para alterar dados da seção 2 - Umidade
+function colocarUmidadeNaTela(dados) {
+
+  //Dados sobre a humidade e vento
+  document.querySelector(".card_content_air_humidity_info").innerHTML = Math.floor(dados.main.humidity) + "%"
+  document.querySelector(".card_content_air_pressure_info").innerHTML = Math.floor(dados.main.pressure) + "hPa"
+  document.querySelector(".card_content_air_wind_info").innerHTML = Math.floor(dados.wind.speed) + "m/s"
+}
+
+//Função para alterar os dados da seção 1 - Temperatura
+function colocarTemperaturaNaTela(dados) {
+
+  //Troca dos icones
   console.log(dados)
-  document.querySelector(".card_title").innerHTML = "tempo em " + dados.name
+  document.querySelector(".card_title").innerHTML = "tempo em " + dados.name + ", " + dados.sys.country
   document.querySelector(".card_content_legend_weather_info").innerHTML = dados.weather[0].description
   let icon = dados.weather[0].icon;
   switch (icon) {
       case "01d":
-        document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/rpZYWMw1/clear-sky-icon.png";
+        document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/vBf3Nc9b/clear-sky-icon.png";
         break;
       case "01n":
         document.querySelector(".card_content_legend_weather_img").src = "https://i.postimg.cc/DytvQ38K/clear-sky-nigth-icon.png";
@@ -79,14 +112,7 @@ function colocarDadosNaTela(dados) {
   document.querySelector(".card_content_legend_group_temperature_max").innerHTML = "Máx: " + Math.floor(dados.main.temp_max) + "°C"
   document.querySelector(".card_content_legend_group_temperature_min").innerHTML = "Mín: " + Math.floor(dados.main.temp_min) + "°C"
   document.querySelector(".card_content_legend_group_sensation").innerHTML = "Sensação: " + Math.floor(dados.main.feels_like) + "°C"
-
-  //Dados sobre a humidade e vento
-  document.querySelector(".card_content_air_humidity_info").innerHTML = Math.floor(dados.main.humidity) + "%"
-  document.querySelector(".card_content_air_pressure_info").innerHTML = Math.floor(dados.main.pressure) + "hPa"
-  document.querySelector(".card_content_air_wind_info").innerHTML = Math.floor(dados.wind.speed) + "m/s"
 }
-
-
 
 //buscar as informações da cidade no servidor
 //Com o "async" o navegador executa a função de forma asincrona enquanto carrega as demais informações do site.
@@ -95,7 +121,10 @@ async function buscarInformacaoDaCidade(cidade) {
   //realizará a consulta ao servidor e retornará as informações da cidade informada pelo usuário
   const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${key}&units=metric&lang=pt_br`).then(response => response.json())
 
-  colocarDadosNaTela(dados)
+  colocarTemperaturaNaTela(dados),
+  colocarUmidadeNaTela(dados),
+  colocarNascerDoSolNaTela(dados),
+  colocarPorDoSolNaTela(dados)
 }
 
 //Armazenar o nome da cidade ao clicar no botão de pesquisar
