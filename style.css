@@ -1,15 +1,9 @@
 :root {
-    --body-background-color: #E1E1E1;
-    --card-search-bar-background-color: #F6F6F6;
-    --card-search-bar-text-color: #545454;
-    --card-search-button-color: #4E84F8;
-    --card-title-color: #545454;
-    --card-content-legend-text-color: #F6F6F6;
-    --card-content-legend-border-color: #F6F6F6;
-    --card-content-air-background-color: #F6F6F6;
-    --card-content-air-text-color: #545454;
-    --baseboard-background-color:  #4574DA;
-    --baseboard-text-color: #F6F6F6;
+    --background-color: #D6D6DB;
+    --asside-color: #F2F2F2;
+    --text-color: #3C3B3C;
+    --description-color: #666364;
+    --emphasis-color: #88A6BB; 
     
     /*Familia da font utilizada*/
     --font-family: "Popins", sans-serif;
@@ -23,379 +17,169 @@
 
 body {
     display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 45px;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+/*Estilização da barra lateral*/
+.sidebar {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--body-background-color);
+    padding: 0px 32px;
+    background-color: var(--asside-color);
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 57px;
-}
-
-.card_search {
+.sidebar-header-search {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    margin-bottom: 40px;
 }
 
-.card_search_bar {
+.sidebar-header-search-text {
     border: none;
     outline: none;
-    padding: 12px;
-    border-radius: 8px;
-    background-color: var(--card-search-bar-background-color);
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-search-bar-text-color);
-}
-
-.card_search_bar::placeholder {
+    padding: 10px;
+    width: 200px;
+    border-radius: 12px 0px 0px 12px;
+    background-color: #FFFFFF;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 0.75rem;
-    color: var(--card-search-bar-text-color);
+    color: var(--text-color);
 }
 
-.card_search_button {
+.sidebar-header-search-text::placeholder {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--description-color);
+}
+
+.sidebar-header-search-button {
     border: none;
     outline: none;
-    width: 10%;
-    cursor: pointer;
-    border-radius: 8px;
-    background-color: var(--card-search-button-color);
+    width: 50px;
+    padding: 4px 10px;
+    border-radius: 0px 12px 12px 0px;
+    background-color: var(--emphasis-color);
 }
 
-.card_title {
+.sidebar-header-search-button-icon {
+    width: 30px;
+}
+
+.sidebar-header-title-text {
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.5rem;
-    color: var(--card-title-color);
-    text-transform: capitalize;
+    color: var(--text-color);
     text-align: center;
+    margin-bottom: 30px;
 }
 
-.card_content {
-    display: flex;
-    gap: 25px;
-}
-
-.card_content_legend {
+.sidebar-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    padding: 16px;
-    border-radius: 24px;
-    border: 8px solid var(--card-content-legend-border-color);
-    background-image: url("./assets/legend-background.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    justify-content: center;
 }
 
-.card_content_legend_header {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
+.sidebar-content-image-icon {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0px 5px 200px);
 }
 
-.card_content_legend_weather {
-    display: flex;
-    align-items: end;
-}
-
-.card_content_legend_weather_img {
-    width: 100px;
-    filter: drop-shadow(0 2px 50px #000000);
-}
-
-.card_content_legend_temperature {
+.sidebar-content-description-text {
     font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 50px;
-    color: var(--card-content-legend-text-color);
-    text-align: end;
-    filter: drop-shadow(0 2px 15px #000000);
-    height: 120px;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: start;
+    margin-bottom: 5px;
 }
 
-.card_content_legend_weather_info {
+.sidebar-content-description-info {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
-    color: var(--card-content-legend-text-color);
+    color: var(--text-color);
+    text-align: start;
     text-transform: capitalize;
-    filter: drop-shadow(0 2px 15px #000000);
-    border-bottom: 1px solid var(--card-content-legend-border-color);
-    padding-bottom: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--description-color);
 }
 
-.card_content_legend_grup {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    margin-top: 5px;
-}
-
-.card_content_legend_group_temperature_max {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+.sidebar-content-information {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 0.875rem;
-    color: var(--card-content-legend-text-color);
+    color: var(--text-color);
+    text-align: start;
     text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+/*Estilização da previsão nos próximos 5 dias*/
+.card-week-content-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: start;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.card-week-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 85px;
+}
+
+.card-week-content-container-card {
+    padding: 15px 43px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0px 5px 250px);
+}
+
+.card-week-content-container-card-date {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
     text-align: center;
-    filter: drop-shadow(0 2px 15px #000000);
+    text-transform: capitalize;
 }
 
-.card_content_legend_group_temperature_min {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+.card-week-content-container-card-icon {
+    width: 64px;
+    height: 64px;
+    margin: 7px 0;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-week-content-container-card-temp {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-content-legend-text-color);
-    text-transform: capitalize;
+    font-size: 1rem;
+    color: var(--description-color);
     text-align: center;
-    filter: drop-shadow(0 2px 15px #000000);
-}
-
-.card_content_legend_group_sensation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-content-legend-text-color);
-    text-transform: capitalize;
-    text-align: center;
-    filter: drop-shadow(0 2px 15px #000000);
-}
-
-
-/*Estilização da Segunda Seção*/
-.card_content_air {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.card_content_air_humidity {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    border-radius: 16px;
-    background-color: var(--card-content-air-background-color);
-}
-
-.card_content_air_humidity_text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-content-air-text-color);
     text-transform: capitalize;
 }
-
-.card_content_air_humidity_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--card-content-air-text-color);
-    text-align: center;
-}
-
-.card_content_air_humidity_img {
-    width: 50px;
-}
-
-.card_content_air_pressure {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 15px;
-    border-radius: 16px;
-    background-color: var(--card-content-air-background-color);
-}
-
-.card_content_air_pressure_text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-content-air-text-color);
-    text-transform: capitalize;
-}
-
-.card_content_air_pressure_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--card-content-air-text-color);
-}
-
-.card_content_air_pressure_img {
-    width: 50px;
-}
-
-.card_content_air_wind {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    border-radius: 16px;
-    background-color: var(--card-content-air-background-color);
-}
-
-.card_content_air_wind_text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-content-air-text-color);
-    text-transform: capitalize;
-}
-
-.card_content_air_wind_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--card-content-air-text-color);
-    text-transform: lowercase;
-}
-
-.card_content_air_wind_img {
-    width: 50px;
-}
-
-
-/*Estilização Seção do Sol*/
-.card_content_sun {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.card_content_sunrise {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 15px;
-    border-radius: 16px;
-    background-color: var(--card-content-air-background-color);
-}
-
-.card_content_sunrise_text {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-content-air-text-color);
-    text-transform: capitalize;
-}
-
-.card_content_sunrise_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--card-content-air-text-color);
-    text-transform: lowercase;
-}
-
-.card_content_sunrise_img {
-    width: 100px;
-}
-
-.card_content_sunset {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 15px 15px;
-    border-radius: 16px;
-    background-color: var(--card-content-air-background-color);
-}
-
-.card_content_sunset_text {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 0.875rem;
-    color: var(--card-content-air-text-color);
-    text-transform: capitalize;
-}
-
-.card_content_sunset_info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--card-content-air-text-color);
-    text-transform: lowercase;
-}
-
-.card_content_sunset_img {
-    width: 100px;
-}
-
-
 
 
 
@@ -407,12 +191,12 @@ body {
     font-size: 0.75rem;
     text-align: center;
     text-transform: capitalize;
-    color: var(--baseboard-text-color);
+    color: var(--text-color);
     padding: 8px;
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: var(--baseboard-background-color); 
+    background-color: var(--emphasis-color); 
 }
 
 /*Responsividade Monitores*/
