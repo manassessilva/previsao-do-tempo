@@ -18,7 +18,7 @@
 body {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: start;
     height: 100vh;
     background-color: var(--background-color);
 }
@@ -128,20 +128,25 @@ body {
     margin-top: 20px;
 }
 
+
+
+
 /*Estilização do conteúdo principal - o main*/
 .card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
+    width: 100%;
     padding: 40px;
 }
+
 
 /*Estilização da previsão nos próximos 5 dias*/
 .card-week-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .card-week-content-title {
@@ -155,10 +160,9 @@ body {
 
 .card-week-content-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 85px;
+    padding: 0 50px;
 }
 
 .card-week-content-container-card {
@@ -194,13 +198,11 @@ body {
 }
 
 
-
-
 /*Estilização da seção de destaque do dia*/
 .card-today-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
 }
 
 .card-today-content-title {
@@ -214,14 +216,11 @@ body {
 
 .card-today-content-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 0 200px;
+    padding: 0 50px;
+    gap: 30px;
 }
-
 
 /*Estilização cartão humidade*/
 .card-today-content-container-humidity {
@@ -229,8 +228,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 10px;
+    gap: 20px;
     width: 200px;
+    height: 200px;
     padding: 30px;
     border-radius: 12px;
     background-color: var(--asside-color);
@@ -248,9 +248,9 @@ body {
 
 .card-today-content-container-humidity-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    width: 100%;
+    gap: 20px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 2rem;
@@ -262,7 +262,7 @@ body {
 .card-today-content-container-humidity-info-icon {
     width: 64px;
     height: 64px;
-    filter: drop-shadow(0px 5px 60px);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .card-today-content-container-humidity-description {
@@ -274,15 +274,15 @@ body {
     text-transform: capitalize;
 }
 
-
 /*Estilização cartão velocidade do vento*/
 .card-today-content-container-wind {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
     width: 200px;
+    height: 200px;
     padding: 30px;
     border-radius: 12px;
     background-color: var(--asside-color);
@@ -299,22 +299,29 @@ body {
 }
 
 .card-today-content-container-wind-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+margin-right: 15px;
+}
+
+.card-today-content-container-wind-info-value {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 2rem;
     color: var(--text-color);
-    text-align: center;
-    text-transform: capitalize;
+    text-align: start;
+}
+
+.card-today-content-container-wind-info-unit {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: start;
 }
 
 .card-today-content-container-wind-info-icon {
     width: 64px;
     height: 64px;
-    filter: drop-shadow(0px 5px 60px);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .card-today-content-container-wind-description {
@@ -326,15 +333,15 @@ body {
     text-transform: capitalize;
 }
 
-
 /*Estilização cartão nascer do sol*/
 .card-today-content-container-sunrise {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
-    gap: 10px;
+    gap: 25px;
     width: 200px;
+    height: 200px;
     padding: 30px;
     border-radius: 12px;
     background-color: var(--asside-color);
@@ -350,147 +357,46 @@ body {
     text-transform: capitalize;
 }
 
-.card-today-content-container-sunrise-info {
+.card-today-content-container-sunrise-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    width: 100%;
+    gap: 5px;
+}
+
+.card-today-content-container-sunrise-group-info-value {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 2rem;
     color: var(--text-color);
-    text-align: center;
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-sunrise-group-info-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: start;
     text-transform: capitalize;
 }
 
 .card-today-content-container-sunrise-info-icon {
     width: 64px;
     height: 64px;
-    filter: drop-shadow(0px 5px 60px);
-}
-
-.card-today-content-container-sunrise-description {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--text-color);
-    text-align: center;
-    text-transform: capitalize;
-}
-
-
-/*Estilização cartão qualidade do ar*/
-.card-today-content-container-air {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    width: 200px;
-    padding: 30px;
-    border-radius: 12px;
-    background-color: var(--asside-color);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
-
-.card-today-content-container-air-title {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--description-color);
-    text-align: start;
-    text-transform: capitalize;
-}
-
-.card-today-content-container-air-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 2rem;
-    color: var(--text-color);
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.card-today-content-container-air-info-icon {
-    width: 64px;
-    height: 64px;
-    filter: drop-shadow(0px 5px 60px);
-}
-
-.card-today-content-container-air-description {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--text-color);
-    text-align: center;
-    text-transform: capitalize;
-}
-
-
-/*Estilização cartão visibilidade*/
-.card-today-content-container-visibility {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    width: 200px;
-    padding: 30px;
-    border-radius: 12px;
-    background-color: var(--asside-color);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
-}
-
-.card-today-content-container-visibility-title {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--description-color);
-    text-align: start;
-    text-transform: capitalize;
-}
-
-.card-today-content-container-visibility-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 2rem;
-    color: var(--text-color);
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.card-today-content-container-visibility-info-icon {
-    width: 64px;
-    height: 64px;
-    filter: drop-shadow(0px 5px 60px);
-}
-
-.card-today-content-container-visibility-description {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--text-color);
-    text-align: center;
-    text-transform: capitalize;
-}
-
 
 /*Estilização cartão por do sol*/
 .card-today-content-container-sunset {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
-    gap: 10px;
+    gap: 25px;
     width: 200px;
+    height: 200px;
     padding: 30px;
     border-radius: 12px;
     background-color: var(--asside-color);
@@ -506,57 +412,40 @@ body {
     text-transform: capitalize;
 }
 
-.card-today-content-container-sunset-info {
+.card-today-content-container-sunset-group {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    width: 100%;
+    gap: 5px;
+}
+
+.card-today-content-container-sunset-group-info-value {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 2rem;
     color: var(--text-color);
-    text-align: center;
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-sunset-group-info-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: start;
     text-transform: capitalize;
 }
 
 .card-today-content-container-sunset-info-icon {
     width: 64px;
     height: 64px;
-    filter: drop-shadow(0px 5px 60px);
-}
-
-.card-today-content-container-sunset-description {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--text-color);
-    text-align: center;
-    text-transform: capitalize;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Estilização do rodapé*/
 .baseboard {
     font-family: var(--font-family);
     font-style: normal;
@@ -571,6 +460,9 @@ body {
     bottom: 0;
     background-color: var(--emphasis-color); 
 }
+
+
+
 
 /*Responsividade Monitores*/
 @media (width >= 1600px) {
@@ -642,38 +534,14 @@ body {
 }
 
 /*Responsividade dispositivos pequenos*/
-@media (width <= 400px) {
+@media (max-width: 400px) {
     body {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 50px;
-        padding-top: 50px;
+        justify-content: star;
     }
 
-    .card {
-        width: 80%;
-        align-items: center;
-    }
-
-    .card_search_bar {
-        width: 80%;
-    }
-
-    .card_search_button {
-        width: 15%;
-    }
-
-    .card_content {
-        flex-direction: column;
-    }
-
-    .card_content_air {
-        gap: 20px;
-    }
-    
-    .baseboard {
-        position: relative;
+    .sidebar {
+        width: 100%;
     }
 }
