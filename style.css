@@ -17,9 +17,8 @@
 
 body {
     display: flex;
-    justify-content: start;
+    flex-direction: row;
     align-items: center;
-    gap: 45px;
     height: 100vh;
     background-color: var(--background-color);
 }
@@ -129,8 +128,22 @@ body {
     margin-top: 20px;
 }
 
+/*Estilização do conteúdo principal - o main*/
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
 
 /*Estilização da previsão nos próximos 5 dias*/
+.card-week-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .card-week-content-title {
     font-family: var(--font-family);
     font-weight: 400;
@@ -138,7 +151,6 @@ body {
     color: var(--text-color);
     text-align: start;
     text-transform: capitalize;
-    margin-bottom: 30px;
 }
 
 .card-week-content-container {
@@ -153,7 +165,7 @@ body {
     padding: 15px 43px;
     border-radius: 12px;
     background-color: var(--asside-color);
-    filter: drop-shadow(0px 5px 250px);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .card-week-content-container-card-date {
@@ -168,7 +180,7 @@ body {
 .card-week-content-container-card-icon {
     width: 64px;
     height: 64px;
-    margin: 7px 0;
+    margin: 7px 0px;
     filter: drop-shadow(0px 5px 60px);
 }
 
@@ -180,6 +192,367 @@ body {
     text-align: center;
     text-transform: capitalize;
 }
+
+
+
+
+/*Estilização da seção de destaque do dia*/
+.card-today-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card-today-content-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 200px;
+}
+
+
+/*Estilização cartão humidade*/
+.card-today-content-container-humidity {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-today-content-container-humidity-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-humidity-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-humidity-info-icon {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-today-content-container-humidity-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/*Estilização cartão velocidade do vento*/
+.card-today-content-container-wind {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-today-content-container-wind-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-wind-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-wind-info-icon {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-today-content-container-wind-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/*Estilização cartão nascer do sol*/
+.card-today-content-container-sunrise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-today-content-container-sunrise-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-sunrise-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-sunrise-info-icon {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-today-content-container-sunrise-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/*Estilização cartão qualidade do ar*/
+.card-today-content-container-air {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-today-content-container-air-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-air-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-air-info-icon {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-today-content-container-air-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/*Estilização cartão visibilidade*/
+.card-today-content-container-visibility {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-today-content-container-visibility-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-visibility-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-visibility-info-icon {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-today-content-container-visibility-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/*Estilização cartão por do sol*/
+.card-today-content-container-sunset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    width: 200px;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-today-content-container-sunset-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: start;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-sunset-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-today-content-container-sunset-info-icon {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-today-content-container-sunset-description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
