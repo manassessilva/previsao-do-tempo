@@ -28,16 +28,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    gap: 40px;
     height: 100vh;
     padding: 0px 32px;
     background-color: var(--asside-color);
 }
 
+.sidebar-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
 .sidebar-header-search {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
 }
 
 .sidebar-header-search-text {
@@ -65,6 +72,7 @@ body {
     outline: none;
     width: 50px;
     padding: 4px 10px;
+    cursor: pointer;
     border-radius: 0px 12px 12px 0px;
     background-color: var(--emphasis-color);
 }
@@ -78,54 +86,133 @@ body {
     font-weight: 400;
     font-size: 1.5rem;
     color: var(--text-color);
-    text-align: center;
-    margin-bottom: 30px;
 }
 
 .sidebar-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .sidebar-content-image-icon {
     width: 200px;
     height: 200px;
-    margin-bottom: 30px;
     filter: drop-shadow(0px 5px 200px);
 }
 
-.sidebar-content-description-text {
+.sidebar-content-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.sidebar-content-description-temperature-text {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 3rem;
     color: var(--text-color);
-    text-align: start;
-    margin-bottom: 5px;
 }
 
-.sidebar-content-description-info {
+.sidebar-content-description-temperature-info {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
     color: var(--text-color);
-    text-align: start;
     text-transform: capitalize;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--description-color);
 }
 
-.sidebar-content-information {
+.sidebar-content-temperature {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.sidebar-content-temperature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 0.875rem;
     color: var(--text-color);
-    text-align: start;
     text-transform: capitalize;
+}
+
+.sidebar-content-temperature-min {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+
+.sidebar-content-temperature-max {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+
+.sidebar-content-temperature-sensation {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+
+.sidebar-baseboard {
+    padding: 5px 15px;
+    border-radius: 6px;
+    background-image: url(https://i.postimg.cc/qqsNt020/card-cloud.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.sidebar-baseboard-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-baseboard-time-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: start;
+    gap: 5px;
+}
+
+.sidebar-baseboard-time-group-day {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--asside-color);
+}
+
+.sidebar-baseboard-time-group-date {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--asside-color);
+}
+
+.sidebar-baseboard-hour-text {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--asside-color);
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
 
 
@@ -165,14 +252,14 @@ body {
     padding: 0 50px;
 }
 
-.card-week-content-container-card {
+.card-week-content-container-card-one {
     padding: 15px 43px;
     border-radius: 12px;
     background-color: var(--asside-color);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
-.card-week-content-container-card-date {
+.card-week-content-container-card-one-day {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
@@ -181,14 +268,14 @@ body {
     text-transform: capitalize;
 }
 
-.card-week-content-container-card-icon {
+.card-week-content-container-card-one-icon {
     width: 64px;
     height: 64px;
     margin: 7px 0px;
     filter: drop-shadow(0px 5px 60px);
 }
 
-.card-week-content-container-card-temp {
+.card-week-content-container-card-one-temp {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 1rem;
@@ -197,6 +284,133 @@ body {
     text-transform: capitalize;
 }
 
+.card-week-content-container-card-two {
+    padding: 15px 43px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-week-content-container-card-two-day {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-week-content-container-card-two-icon {
+    width: 64px;
+    height: 64px;
+    margin: 7px 0px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-week-content-container-card-two-temp {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-week-content-container-card-three {
+    padding: 15px 43px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-week-content-container-card-three-day {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-week-content-container-card-three-icon {
+    width: 64px;
+    height: 64px;
+    margin: 7px 0px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-week-content-container-card-three-temp {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-week-content-container-card-four {
+    padding: 15px 43px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-week-content-container-card-four-day {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-week-content-container-card-four-icon {
+    width: 64px;
+    height: 64px;
+    margin: 7px 0px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-week-content-container-card-four-temp {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-week-content-container-card-five {
+    padding: 15px 43px;
+    border-radius: 12px;
+    background-color: var(--asside-color);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.card-week-content-container-card-five-day {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.card-week-content-container-card-five-icon {
+    width: 64px;
+    height: 64px;
+    margin: 7px 0px;
+    filter: drop-shadow(0px 5px 60px);
+}
+
+.card-week-content-container-card-five-temp {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--description-color);
+    text-align: center;
+    text-transform: capitalize;
+}
 
 /*Estilização da seção de destaque do dia*/
 .card-today-content {
@@ -244,6 +458,12 @@ body {
     color: var(--description-color);
     text-align: start;
     text-transform: capitalize;
+}
+
+.card-today-content-container-humidity-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .card-today-content-container-humidity-info {
@@ -299,7 +519,10 @@ body {
 }
 
 .card-today-content-container-wind-info {
-margin-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .card-today-content-container-wind-info-value {

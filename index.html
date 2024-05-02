@@ -27,8 +27,8 @@
 
         <header class="sidebar-header">
             <div class="sidebar-header-search">
-                <input class="sidebar-header-search-text" type="text" placeholder="Digite o nome da cidade">
-                <button class="sidebar-header-search-button">
+                <input class="sidebar-header-search-text" type="text" placeholder="Digite o nome da cidade" required>
+                <button class="sidebar-header-search-button" onclick="aoClicarNoBotão()">
                     <img class="sidebar-header-search-button-icon" src="https://i.postimg.cc/gcQJb31Z/search-icon.png" alt="icone de lupa">
                 </button>
             </div>
@@ -43,28 +43,44 @@
                 <img class="sidebar-content-image-icon" src="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png" alt="icone de nuvem com o sol atras">
             </div>
 
-            <div class="sidebar-content-description">
-                <p class="sidebar-content-description-text">26°c</p>
-                <h2 class="sidebar-content-description-info">nuvens dispersas</h2>
-            </div>
-
-            <div class="sidebar-content-information">
-                <p>
-                    temperatura mínima:
-                    <span>23°c</span>
-                </p> 
-
-                <p>
-                    temperatura máxima:
-                    <span>28°c</span>
-                </p> 
-
-                <p>
-                    seancação temrica:
-                    <span>31°c</span>
-                </p> 
-            </div>
+            <section class="sidebar-content-description">
+                <div class="sidebar-content-description-temperature">
+                    <p class="sidebar-content-description-temperature-text">26°c</p>
+                    <h2 class="sidebar-content-description-temperature-info">nuvens dispersas</h2>
+                </div>
+    
+                <div class="sidebar-content-temperature">
+                    <p class="sidebar-content-temperature-text">
+                        Mín:
+                        <span class="sidebar-content-temperature-min">23°c</span>
+                    </p> 
+    
+                    <p class="sidebar-content-temperature-text">
+                        máx:
+                        <span class="sidebar-content-temperature-max">28°c</span>
+                    </p> 
+    
+                    <p class="sidebar-content-temperature-text">
+                        sensação:
+                        <span class="sidebar-content-temperature-sensation">31°c</span>
+                    </p> 
+                </div>
+            </section>
+            
         </main>
+
+        <footer class="sidebar-baseboard">
+            <div class="sidebar-baseboard-time">
+                <div class="sidebar-baseboard-time-group">
+                    <p class="sidebar-baseboard-time-group-day">Domingo</p>
+                    <p class="sidebar-baseboard-time-group-date">21 de Abril</p>
+                </div>
+                <div class="sidebar-baseboard-hour">
+                    <p class="sidebar-baseboard-hour-text">15:10</p>
+                </div>
+            </div>
+        </footer>
+
     </aside>
 
     <main class="card">
@@ -75,34 +91,34 @@
                 <h3 class="card-week-content-title">destaques da semana</h3>
                 <section class="card-week-content-container">
 
-                    <div class="card-week-content-container-card">
-                        <p class="card-week-content-container-card-date">seg</p>
-                        <img class="card-week-content-container-card-icon" src="https://i.postimg.cc/Dzcy0ryn/sun-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-temp">28°C</p>
+                    <div class="card-week-content-container-card-one">
+                        <p class="card-week-content-container-card-one-day">seg</p>
+                        <img class="card-week-content-container-card-one-icon" src="https://i.postimg.cc/Dzcy0ryn/sun-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-one-temp">28°C</p>
                     </div>
 
-                    <div class="card-week-content-container-card">
-                        <p class="card-week-content-container-card-date">ter</p>
-                        <img class="card-week-content-container-card-icon" src="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-temp">25°C</p>
+                    <div class="card-week-content-container-card-two">
+                        <p class="card-week-content-container-card-two-day">ter</p>
+                        <img class="card-week-content-container-card-two-icon" src="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-two-temp">25°C</p>
                     </div>
 
-                    <div class="card-week-content-container-card">
-                        <p class="card-week-content-container-card-date">qua</p>
-                        <img class="card-week-content-container-card-icon" src="https://i.postimg.cc/ydcFGrVs/cloudy-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-temp">26°C</p>
+                    <div class="card-week-content-container-card-three">
+                        <p class="card-week-content-container-card-three-day">qua</p>
+                        <img class="card-week-content-container-card-three-icon" src="https://i.postimg.cc/ydcFGrVs/cloudy-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-three-temp">26°C</p>
                     </div>
 
-                    <div class="card-week-content-container-card">
-                        <p class="card-week-content-container-card-date">qui</p>
-                        <img class="card-week-content-container-card-icon" src="https://i.postimg.cc/VNS9qkpS/dark-cloud-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-temp">27°C</p>
+                    <div class="card-week-content-container-card-four">
+                        <p class="card-week-content-container-card-four-day">qui</p>
+                        <img class="card-week-content-container-card-four-icon" src="https://i.postimg.cc/VNS9qkpS/dark-cloud-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-four-temp">27°C</p>
                     </div>
 
-                    <div class="card-week-content-container-card">
-                        <p class="card-week-content-container-card-date">sex</p>
-                        <img class="card-week-content-container-card-icon" src="https://i.postimg.cc/N0W6pwvd/rain-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-temp">24°C</p>
+                    <div class="card-week-content-container-card-five">
+                        <p class="card-week-content-container-card-five-day">sex</p>
+                        <img class="card-week-content-container-card-five-icon" src="https://i.postimg.cc/N0W6pwvd/rain-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-five-temp">24°C</p>
                     </div>
 
                 </section>
@@ -120,20 +136,27 @@
 
                     <div class="card-today-content-container-humidity">
                         <p class="card-today-content-container-humidity-title">Umidade</p>
-                        <p class="card-today-content-container-humidity-info">
-                            70%
+                        <div class="card-today-content-container-humidity-group">
+                            <p class="card-today-content-container-humidity-info">
+                                70%
+                            </p>
                             <img class="card-today-content-container-humidity-info-icon" src="https://i.postimg.cc/dQnqW2Yx/Humidity-icon.png" alt="Ícone de gota d'água">
-                        </p>
+                        </div>
                         <span class="card-today-content-container-humidity-description">Normal</span>                        
                     </div>
 
                     <div class="card-today-content-container-wind">
                         <p class="card-today-content-container-wind-title">vel. do vento</p>
                         <div class="card-today-content-container-wind-info">
-                            <p class="card-today-content-container-wind-info-value">4,5</p>
-                            <p class="card-today-content-container-wind-info-unit">km/h</p>
+                            <div>
+                                <p class="card-today-content-container-wind-info-value">4.50</p>
+                                <p class="card-today-content-container-wind-info-unit">km/h</p>
+                            </div>
+                            
+                            <div>
+                                <img class="card-today-content-container-wind-info-icon" src="https://i.postimg.cc/grFV1C9v/wind-strom-icon.png" alt="Ícone de vento">
+                            </div>
                         </div>
-                        <img class="card-today-content-container-wind-info-icon" src="https://i.postimg.cc/grFV1C9v/wind-strom-icon.png" alt="Ícone de vento">
                         <span class="card-today-content-container-wind-description">direção norte</span>
                     </div>
 
@@ -153,7 +176,7 @@
                         <div class="card-today-content-container-sunset-group">
                             <div class="card-today-content-container-sunset-group-info">
                                 <p class="card-today-content-container-sunset-group-info-value">18:00</p>
-                                <p class="card-today-content-container-sunset-group-info-description">horas da manhã</p>
+                                <p class="card-today-content-container-sunset-group-info-description">horas da tarde</p>
                             </div>
                             <img class="card-today-content-container-sunrise-info-icon" src="https://i.postimg.cc/3RNFGjCD/sunrise-icon.png" alt="Ícone do sol com seta para cima no meio">
                         </div>
