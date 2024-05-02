@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Previsão do Tempo</title> <!--Título da página-->
-    <link rel="icon" href="./assets/page-icon.svg"> <!--Icone da página-->
+    <link rel="icon" href="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png"> <!--Ícone da página-->
 
     <!--Importação da estilização CSS-->
     <link rel="stylesheet" href="./style.css">
@@ -17,108 +17,204 @@
     wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!--Importação do JavaScript-->
-    <script src="script.js"></script>
+    <script src="script.js" ></script>
 
 </head>
 
 <body>
- 
-    <main class="card">
 
-        <header class="card_search">
-            <input class="card_search_bar" type="text" placeholder="Digite o nome da cidade" required>
+    <aside class="sidebar">
+
+        <header class="sidebar-header">
+            <div class="sidebar-header-search">
+                <input class="sidebar-header-search-text" type="text" placeholder="Digite o nome da cidade" required>
+                <button class="sidebar-header-search-button" onclick="aoClicarNoBotão()">
+                    <img class="sidebar-header-search-button-icon" src="https://i.postimg.cc/gcQJb31Z/search-icon.png" alt="icone de lupa">
+                </button>
+            </div>
             
-            <button class="card_search_button" onclick="aoClicarNoBotão()">   <!--O "onclick" está chamando a função para armazenar o nome da cidade inserida no input-->
-                <svg xmlns="http://www.w3.org/2000/svg"  width="25" height="25" viewBox="0 0 256 256">
-                    <path fill="#F6F6F6" d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
-                </svg>
-            </button>
+            <div class="sidebar-header-title">
+                <h1 class="sidebar-header-title-text">Recife, BR</h1>
+            </div>
         </header>
 
-        <h1 class="card_title">tempo em...</h1>
+        <main class="sidebar-content">
+            <div class="sidebar-content-image">
+                <img class="sidebar-content-image-icon" src="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png" alt="icone de nuvem com o sol atras">
+            </div>
 
-        <section class="card_content">
-
-            <section class="card_content_legend">
-
-                <div class="card_content_legend_header">
-                    <div class="card_content_legend_weather">
-                        <img class="card_content_legend_weather_img" src="https://i.postimg.cc/vBf3Nc9b/clear-sky-icon.png" alt="icone do tempo">
-                    </div>
-                    <div class="card_content_legend_temperature">
-                        <p>25°C</p>
-                    </div>
+            <section class="sidebar-content-description">
+                <div class="sidebar-content-description-temperature">
+                    <p class="sidebar-content-description-temperature-text">26°c</p>
+                    <h2 class="sidebar-content-description-temperature-info">nuvens dispersas</h2>
                 </div>
-                
-                <div class="card_content_legend_description">
-                    <p class="card_content_legend_weather_info">nuvens dispersas</p>
-                </div>
-                
-                
-                <div class="card_content_legend_grup">
-                    <p class="card_content_legend_group_temperature_max">
-                        <span>máx:</span>
-                        25°C
-                    </p>
-                    <p class="card_content_legend_group_temperature_min">
-                        <span>mín:</span>
-                        18°C
-                    </p>
-                    <p class="card_content_legend_group_sensation">
-                        <span>sensação:</span>
-                        28°C
-                    </p>
+    
+                <div class="sidebar-content-temperature">
+                    <p class="sidebar-content-temperature-text">
+                        Mín:
+                        <span class="sidebar-content-temperature-min">23°c</span>
+                    </p> 
+    
+                    <p class="sidebar-content-temperature-text">
+                        máx:
+                        <span class="sidebar-content-temperature-max">28°c</span>
+                    </p> 
+    
+                    <p class="sidebar-content-temperature-text">
+                        sensação:
+                        <span class="sidebar-content-temperature-sensation">31°c</span>
+                    </p> 
                 </div>
             </section>
+            
+        </main>
 
-            <section class="card_content_air">
-                <div class="card_content_air_humidity">
-                    <p class="card_content_air_humidity_text">
-                        umidade:
-                        <span class="card_content_air_humidity_info">70%</span>
-                    </p>
-                    <img class="card_content_air_humidity_img" src="./assets/humidity-icon.png" alt="ícone de gota d'água">
+        <footer class="sidebar-baseboard">
+            <div class="sidebar-baseboard-time">
+                <div class="sidebar-baseboard-time-group">
+                    <p class="sidebar-baseboard-time-group-day">Domingo</p>
+                    <p class="sidebar-baseboard-time-group-date">21 de Abril</p>
                 </div>
+                <div class="sidebar-baseboard-hour">
+                    <p class="sidebar-baseboard-hour-text">15:10</p>
+                </div>
+            </div>
+        </footer>
 
-                <div class="card_content_air_pressure">
-                    <p class="card_content_air_pressure_text">
-                        pressão do ar:
-                        <span class="card_content_air_pressure_info">1008hPa</span>
-                    </p>
-                    <img class="card_content_air_pressure_img" src="./assets/pressure-air-icon.png" alt="icone de ventilação">
-                </div>
+    </aside>
 
-                <div class="card_content_air_wind">
-                    <p class="card_content_air_wind_text">
-                        vel. do vento:
-                        <span class="card_content_air_wind_info">5.14m/s</span>
-                    </p>
-                    <img class="card_content_air_wind_img" src="./assets/wind-speed-icon.png" alt="icone de ventilação">
-                </div>
-            </section>
+    <main class="card">
 
-            <section class="card_content_sun">
-                <div class="card_content_sunrise">
-                    <p class="card_content_sunrise_text">
-                        nascer do sol:
-                        <span class="card_content_sunrise_info">5:00</span>
-                    </p>                    
-                    <img class="card_content_sunrise_img" src="https://i.postimg.cc/xCrQJTmh/sunrise-icon.png" alt="icone do sol nascendo">
-                </div>
+        <section class="card-week">
 
-                <div class="card_content_sunset">
-                    <p class="card_content_sunset_text">
-                        nascer do sol:
-                        <span class="card_content_sunset_info">18:00</span>
-                    </p>                    
-                    <img class="card_content_sunset_img" src="https://i.postimg.cc/j5zbz0Q5/sunset-icon.png" alt="icone do sol nascendo">
-                </div>
-                
-              </section>
+            <div class="card-week-content">
+                <h3 class="card-week-content-title">destaques da semana</h3>
+                <section class="card-week-content-container">
+
+                    <div class="card-week-content-container-card-one">
+                        <p class="card-week-content-container-card-one-day">seg</p>
+                        <img class="card-week-content-container-card-one-icon" src="https://i.postimg.cc/Dzcy0ryn/sun-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-one-temp">28°C</p>
+                    </div>
+
+                    <div class="card-week-content-container-card-two">
+                        <p class="card-week-content-container-card-two-day">ter</p>
+                        <img class="card-week-content-container-card-two-icon" src="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-two-temp">25°C</p>
+                    </div>
+
+                    <div class="card-week-content-container-card-three">
+                        <p class="card-week-content-container-card-three-day">qua</p>
+                        <img class="card-week-content-container-card-three-icon" src="https://i.postimg.cc/ydcFGrVs/cloudy-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-three-temp">26°C</p>
+                    </div>
+
+                    <div class="card-week-content-container-card-four">
+                        <p class="card-week-content-container-card-four-day">qui</p>
+                        <img class="card-week-content-container-card-four-icon" src="https://i.postimg.cc/VNS9qkpS/dark-cloud-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-four-temp">27°C</p>
+                    </div>
+
+                    <div class="card-week-content-container-card-five">
+                        <p class="card-week-content-container-card-five-day">sex</p>
+                        <img class="card-week-content-container-card-five-icon" src="https://i.postimg.cc/N0W6pwvd/rain-icon.png" alt="icone do sol">
+                        <p class="card-week-content-container-card-five-temp">24°C</p>
+                    </div>
+
+                </section>
+            </div>
 
         </section>
 
+        <section class="card-today">
 
+            <div class="card-today-content">
+
+                <h3 class="card-today-content-title">destaques de hoje</h3>
+
+                <section class="card-today-content-container">
+
+                    <div class="card-today-content-container-humidity">
+                        <p class="card-today-content-container-humidity-title">Umidade</p>
+                        <div class="card-today-content-container-humidity-group">
+                            <p class="card-today-content-container-humidity-info">
+                                70%
+                            </p>
+                            <img class="card-today-content-container-humidity-info-icon" src="https://i.postimg.cc/dQnqW2Yx/Humidity-icon.png" alt="Ícone de gota d'água">
+                        </div>
+                        <span class="card-today-content-container-humidity-description">Normal</span>                        
+                    </div>
+
+                    <div class="card-today-content-container-wind">
+                        <p class="card-today-content-container-wind-title">vel. do vento</p>
+                        <div class="card-today-content-container-wind-info">
+                            <div>
+                                <p class="card-today-content-container-wind-info-value">4.50</p>
+                                <p class="card-today-content-container-wind-info-unit">km/h</p>
+                            </div>
+                            
+                            <div>
+                                <img class="card-today-content-container-wind-info-icon" src="https://i.postimg.cc/grFV1C9v/wind-strom-icon.png" alt="Ícone de vento">
+                            </div>
+                        </div>
+                        <span class="card-today-content-container-wind-description">direção norte</span>
+                    </div>
+
+                    <div class="card-today-content-container-sunrise">
+                        <p class="card-today-content-container-sunrise-title">nascer do sol</p>
+                        <div class="card-today-content-container-sunrise-group">
+                            <div class="card-today-content-container-sunrise-group-info">
+                                <p class="card-today-content-container-sunrise-group-info-value">5:00</p>
+                                <p class="card-today-content-container-sunrise-group-info-description">horas da manhã</p>
+                            </div>
+                            <img class="card-today-content-container-sunrise-info-icon" src="https://i.postimg.cc/3RNFGjCD/sunrise-icon.png" alt="Ícone do sol com seta para cima no meio">
+                        </div>
+                    </div>  
+
+                    <div class="card-today-content-container-sunset">
+                        <p class="card-today-content-container-sunset-title">por do sol</p>
+                        <div class="card-today-content-container-sunset-group">
+                            <div class="card-today-content-container-sunset-group-info">
+                                <p class="card-today-content-container-sunset-group-info-value">18:00</p>
+                                <p class="card-today-content-container-sunset-group-info-description">horas da tarde</p>
+                            </div>
+                            <img class="card-today-content-container-sunrise-info-icon" src="https://i.postimg.cc/3RNFGjCD/sunrise-icon.png" alt="Ícone do sol com seta para cima no meio">
+                        </div>
+                        <!-- <p class="card-today-content-container-sunset-info">
+                            18:00
+                            <img class="card-today-content-container-sunset-info-icon" src="https://i.postimg.cc/XqyKHVPj/sunset-icon.png" alt="Ícone do sol com seta para baixo no meio">
+                        </p>
+                        <span class="card-today-content-container-sunset-description">horas da tarde</span> -->
+                    </div>  
+                    
+                    <!-- Serão acidionados posteriormente ao site
+
+                        <div class="card-today-content-container-air">
+                            <p class="card-today-content-container-air-title">qualidade do ar</p>
+                            <p class="card-today-content-container-air-info">
+                                103
+                                <img class="card-today-content-container-air-info-icon" src="https://i.postimg.cc/dQnqW2Yx/Humidity-icon.png" alt="Ícone de gota d'água">
+                            </p>
+                            <span class="card-today-content-container-air-description">pouco saldável</span>
+                        </div>
+
+                        <div class="card-today-content-container-visibility">
+                            <p class="card-today-content-container-visibility-title">visibilidade</p>
+                            <p class="card-today-content-container-visibility-info">
+                                6,2km
+                                <img class="card-today-content-container-visibility-info-icon" src="https://i.postimg.cc/G2fJxBqg/visibility-icon.png" alt="Ícone de linhas tracejadas">
+                            </p>
+                            <span class="card-today-content-container-visibility-description">média</span>
+                        </div> 
+
+                    -->
+
+                </section>
+
+            </div>
+
+        </section>
+       
     </main>
 
     <footer class="baseboard">
