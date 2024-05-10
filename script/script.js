@@ -1,3 +1,73 @@
+let swiperWeekCards = new Swiper('.card-content-week', {
+  loop: false,
+  spaceBetween: 32,
+  grabCursor: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+    700: {
+      slidesPerView: 3,
+    },
+    1025: {
+      slidesPerView: 4,
+    },
+    1300: {
+      slidesPerView: 5,
+    },
+  },
+
+});
+
+let swiperCards = new Swiper('.card-content', {
+  loop: false,
+  spaceBetween: 32,
+  grabCursor: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+    700: {
+      slidesPerView: 2,
+    },
+    1025: {
+      slidesPerView: 3,
+    },
+    1300: {
+      slidesPerView: 4,
+    },
+  },
+
+});
+
 //inserir as informações do por do sol
 function colocarPorDoSolNaTela(dados) {
 

@@ -6,8 +6,11 @@
     <title>Previsão do Tempo</title> <!--Título da página-->
     <link rel="icon" href="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png"> <!--Ícone da página-->
 
+    <!--Importação CSS do Swiper-->
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+
     <!--Importação da estilização CSS-->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css">
 
     <!--Link da fonte do texto-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,9 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,
     wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,
     wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <!--Importação do JavaScript-->
-    <script src="script.js" ></script>
 
 </head>
 
@@ -87,134 +87,136 @@
 
         <section class="card-week">
 
-            <div class="card-week-content">
-                <h3 class="card-week-content-title">destaques da semana</h3>
-                <section class="card-week-content-container">
+            <h3 class="card-week-title">destaques da semana</h3>
 
-                    <div class="card-week-content-container-card-one">
-                        <p class="card-week-content-container-card-one-day">seg</p>
-                        <img class="card-week-content-container-card-one-icon" src="https://i.postimg.cc/Dzcy0ryn/sun-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-one-temp">28°C</p>
+            <section class="container">
+                <div class="card-container swiper">
+                    <div class="card-content-week">
+                        <div class="swiper-wrapper">
+
+                            <div class="card-week-content-container-card-one swiper-slide">
+                                <p class="card-week-content-container-card-one-day">seg</p>
+                                <img class="card-week-content-container-card-one-icon" src="https://i.postimg.cc/Dzcy0ryn/sun-icon.png" alt="icone do sol">
+                                <p class="card-week-content-container-card-one-temp">28°C</p>
+                            </div>
+
+                            <div class="card-week-content-container-card-two swiper-slide">
+                                <p class="card-week-content-container-card-two-day">ter</p>
+                                <img class="card-week-content-container-card-two-icon" src="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png" alt="icone do sol">
+                                <p class="card-week-content-container-card-two-temp">25°C</p>
+                            </div>
+
+                            <div class="card-week-content-container-card-three swiper-slide">
+                                <p class="card-week-content-container-card-three-day">qua</p>
+                                <img class="card-week-content-container-card-three-icon" src="https://i.postimg.cc/ydcFGrVs/cloudy-icon.png" alt="icone do sol">
+                                <p class="card-week-content-container-card-three-temp">26°C</p>
+                            </div>
+
+                            <div class="card-week-content-container-card-four swiper-slide">
+                                <p class="card-week-content-container-card-four-day">qui</p>
+                                <img class="card-week-content-container-card-four-icon" src="https://i.postimg.cc/VNS9qkpS/dark-cloud-icon.png" alt="icone do sol">
+                                <p class="card-week-content-container-card-four-temp">27°C</p>
+                            </div>
+
+                            <div class="card-week-content-container-card-five swiper-slide">
+                                <p class="card-week-content-container-card-five-day">sex</p>
+                                <img class="card-week-content-container-card-five-icon" src="https://i.postimg.cc/N0W6pwvd/rain-icon.png" alt="icone do sol">
+                                <p class="card-week-content-container-card-five-temp">24°C</p>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="card-week-content-container-card-two">
-                        <p class="card-week-content-container-card-two-day">ter</p>
-                        <img class="card-week-content-container-card-two-icon" src="https://i.postimg.cc/yxH6d3ST/few-clouds-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-two-temp">25°C</p>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev">
+                        <i class="ph ph-caret-left"></i>
                     </div>
 
-                    <div class="card-week-content-container-card-three">
-                        <p class="card-week-content-container-card-three-day">qua</p>
-                        <img class="card-week-content-container-card-three-icon" src="https://i.postimg.cc/ydcFGrVs/cloudy-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-three-temp">26°C</p>
+                    <div class="swiper-button-next">
+                        <i class="ph ph-caret-right"></i>
                     </div>
 
-                    <div class="card-week-content-container-card-four">
-                        <p class="card-week-content-container-card-four-day">qui</p>
-                        <img class="card-week-content-container-card-four-icon" src="https://i.postimg.cc/VNS9qkpS/dark-cloud-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-four-temp">27°C</p>
-                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
 
-                    <div class="card-week-content-container-card-five">
-                        <p class="card-week-content-container-card-five-day">sex</p>
-                        <img class="card-week-content-container-card-five-icon" src="https://i.postimg.cc/N0W6pwvd/rain-icon.png" alt="icone do sol">
-                        <p class="card-week-content-container-card-five-temp">24°C</p>
-                    </div>
-
-                </section>
-            </div>
-
+                </div>
+            </section>
         </section>
 
-        <section class="card-today">
+        <section class="card-todday">
 
-            <div class="card-today-content">
+            <h3 class="card-today-title">destaques de hoje</h3>
+            
+            <section class="container">
+                <div class="card-container swiper">
+                    <div class="card-content">
+                        <div class="swiper-wrapper">
+                            <article class="card-today-content-container-humidity swiper-slide">
+                                <p class="card-today-content-container-humidity-title">Umidade</p>
+                                <div class="card-today-content-container-humidity-group">
+                                    <p class="card-today-content-container-humidity-info">
+                                        70%
+                                    </p>
+                                    <img class="card-today-content-container-humidity-info-icon" src="https://i.postimg.cc/dQnqW2Yx/Humidity-icon.png" alt="Ícone de gota d'água">
+                                </div>
+                                <span class="card-today-content-container-humidity-description">Normal</span>                        
+                            </article>
 
-                <h3 class="card-today-content-title">destaques de hoje</h3>
+                            <article class="card-today-content-container-wind swiper-slide">
+                                <p class="card-today-content-container-wind-title">vel. do vento</p>
+                                <div class="card-today-content-container-wind-info">
+                                    <div>
+                                        <p class="card-today-content-container-wind-info-value">4.50</p>
+                                        <p class="card-today-content-container-wind-info-unit">km/h</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <img class="card-today-content-container-wind-info-icon" src="https://i.postimg.cc/grFV1C9v/wind-strom-icon.png" alt="Ícone de vento">
+                                    </div>
+                                </div>
+                                <span class="card-today-content-container-wind-description">direção norte</span>
+                            </article>
 
-                <section class="card-today-content-container">
+                            <article class="card-today-content-container-sunrise swiper-slide">
+                                <p class="card-today-content-container-sunrise-title">nascer do sol</p>
+                                <div class="card-today-content-container-sunrise-group">
+                                    <div class="card-today-content-container-sunrise-group-info">
+                                        <p class="card-today-content-container-sunrise-group-info-value">5:00</p>
+                                        <p class="card-today-content-container-sunrise-group-info-description">horas da manhã</p>
+                                    </div>
+                                    <img class="card-today-content-container-sunrise-info-icon" src="https://i.postimg.cc/3RNFGjCD/sunrise-icon.png" alt="Ícone do sol com seta para cima no meio">
+                                </div>
+                            </article>  
 
-                    <div class="card-today-content-container-humidity">
-                        <p class="card-today-content-container-humidity-title">Umidade</p>
-                        <div class="card-today-content-container-humidity-group">
-                            <p class="card-today-content-container-humidity-info">
-                                70%
-                            </p>
-                            <img class="card-today-content-container-humidity-info-icon" src="https://i.postimg.cc/dQnqW2Yx/Humidity-icon.png" alt="Ícone de gota d'água">
+                            <article class="card-today-content-container-sunset swiper-slide">
+                                <p class="card-today-content-container-sunset-title">por do sol</p>
+                                <div class="card-today-content-container-sunset-group">
+                                    <div class="card-today-content-container-sunset-group-info">
+                                        <p class="card-today-content-container-sunset-group-info-value">18:00</p>
+                                        <p class="card-today-content-container-sunset-group-info-description">horas da tarde</p>
+                                    </div>
+                                    <img class="card-today-content-container-sunrise-info-icon" src="https://i.postimg.cc/3RNFGjCD/sunrise-icon.png" alt="Ícone do sol com seta para cima no meio">
+                                </div>
+                            </article> 
                         </div>
-                        <span class="card-today-content-container-humidity-description">Normal</span>                        
                     </div>
 
-                    <div class="card-today-content-container-wind">
-                        <p class="card-today-content-container-wind-title">vel. do vento</p>
-                        <div class="card-today-content-container-wind-info">
-                            <div>
-                                <p class="card-today-content-container-wind-info-value">4.50</p>
-                                <p class="card-today-content-container-wind-info-unit">km/h</p>
-                            </div>
-                            
-                            <div>
-                                <img class="card-today-content-container-wind-info-icon" src="https://i.postimg.cc/grFV1C9v/wind-strom-icon.png" alt="Ícone de vento">
-                            </div>
-                        </div>
-                        <span class="card-today-content-container-wind-description">direção norte</span>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev">
+                        <i class="ph ph-caret-left"></i>
                     </div>
 
-                    <div class="card-today-content-container-sunrise">
-                        <p class="card-today-content-container-sunrise-title">nascer do sol</p>
-                        <div class="card-today-content-container-sunrise-group">
-                            <div class="card-today-content-container-sunrise-group-info">
-                                <p class="card-today-content-container-sunrise-group-info-value">5:00</p>
-                                <p class="card-today-content-container-sunrise-group-info-description">horas da manhã</p>
-                            </div>
-                            <img class="card-today-content-container-sunrise-info-icon" src="https://i.postimg.cc/3RNFGjCD/sunrise-icon.png" alt="Ícone do sol com seta para cima no meio">
-                        </div>
-                    </div>  
+                    <div class="swiper-button-next">
+                        <i class="ph ph-caret-right"></i>
+                    </div>
 
-                    <div class="card-today-content-container-sunset">
-                        <p class="card-today-content-container-sunset-title">por do sol</p>
-                        <div class="card-today-content-container-sunset-group">
-                            <div class="card-today-content-container-sunset-group-info">
-                                <p class="card-today-content-container-sunset-group-info-value">18:00</p>
-                                <p class="card-today-content-container-sunset-group-info-description">horas da tarde</p>
-                            </div>
-                            <img class="card-today-content-container-sunrise-info-icon" src="https://i.postimg.cc/3RNFGjCD/sunrise-icon.png" alt="Ícone do sol com seta para cima no meio">
-                        </div>
-                        <!-- <p class="card-today-content-container-sunset-info">
-                            18:00
-                            <img class="card-today-content-container-sunset-info-icon" src="https://i.postimg.cc/XqyKHVPj/sunset-icon.png" alt="Ícone do sol com seta para baixo no meio">
-                        </p>
-                        <span class="card-today-content-container-sunset-description">horas da tarde</span> -->
-                    </div>  
-                    
-                    <!-- Serão acidionados posteriormente ao site
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
 
-                        <div class="card-today-content-container-air">
-                            <p class="card-today-content-container-air-title">qualidade do ar</p>
-                            <p class="card-today-content-container-air-info">
-                                103
-                                <img class="card-today-content-container-air-info-icon" src="https://i.postimg.cc/dQnqW2Yx/Humidity-icon.png" alt="Ícone de gota d'água">
-                            </p>
-                            <span class="card-today-content-container-air-description">pouco saldável</span>
-                        </div>
-
-                        <div class="card-today-content-container-visibility">
-                            <p class="card-today-content-container-visibility-title">visibilidade</p>
-                            <p class="card-today-content-container-visibility-info">
-                                6,2km
-                                <img class="card-today-content-container-visibility-info-icon" src="https://i.postimg.cc/G2fJxBqg/visibility-icon.png" alt="Ícone de linhas tracejadas">
-                            </p>
-                            <span class="card-today-content-container-visibility-description">média</span>
-                        </div> 
-
-                    -->
-
-                </section>
-
-            </div>
-
+                </div>
+            </section>
+            
         </section>
-       
     </main>
 
     <footer class="baseboard">
@@ -222,6 +224,18 @@
         <p class="baseboard_content_text">desenvolvido por Manasses Silva</p>
         
     </footer>
+
+
+    <script src="./script/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9.4.1/swiper-bundle.min.js"></script>
+
+    <!--Importação do JavaScript-->
+    <script src="./script/script.js" ></script>
+
+    
+
+    <!-- Importação Swiper JavaScript
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script> -->
 
 </body>
 </html>
