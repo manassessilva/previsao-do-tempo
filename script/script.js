@@ -17,10 +17,10 @@ let swiperWeekCards = new Swiper('.card-content-week', {
   },
 
   breakpoints: {
-    300: {
+    400: {
       slidesPerView: 1,
     },
-    700: {
+    900: {
       slidesPerView: 3,
     },
     1025: {
@@ -55,7 +55,7 @@ let swiperCards = new Swiper('.card-content', {
     300: {
       slidesPerView: 1,
     },
-    700: {
+    900: {
       slidesPerView: 2,
     },
     1025: {
