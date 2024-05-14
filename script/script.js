@@ -20,11 +20,8 @@ let swiperWeekCards = new Swiper('.card-content-week', {
     400: {
       slidesPerView: 1,
     },
-    900: {
+    1024: {
       slidesPerView: 3,
-    },
-    1025: {
-      slidesPerView: 4,
     },
     1300: {
       slidesPerView: 5,
@@ -55,11 +52,8 @@ let swiperCards = new Swiper('.card-content', {
     300: {
       slidesPerView: 1,
     },
-    900: {
+    1024: {
       slidesPerView: 2,
-    },
-    1025: {
-      slidesPerView: 3,
     },
     1300: {
       slidesPerView: 4,

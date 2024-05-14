@@ -742,8 +742,34 @@ body {
 
 
 /*Responssividade*/
+@media (min-width:1px) and (max-width: 344px) {
+    body {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 100%;
+        padding: 80px 32px;
+    }
+
+    .card {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+    }
+
+}
+
 /*Responsividade smartphone*/
-@media (width <= 376px) {
+@media (min-width:345px) and (max-width: 400px) {
     body {
         flex-wrap: nowrap;
         flex-direction: column;
@@ -770,7 +796,7 @@ body {
 }
 
 /*Responssividade smartphones maiores*/
-@media (width <= 570px) {
+@media (min-width: 401px) and (max-width: 570px) {
     body {
         flex-wrap: nowrap;
         flex-direction: column;
@@ -781,7 +807,7 @@ body {
     .sidebar {
         width: 100%;
         height: 100vh;
-        padding: 100px 32px;
+        padding: 100px 96px;
     }
 
     .card {
@@ -790,14 +816,22 @@ body {
         justify-content: center;
     }
 
+    .card-content-week {
+        max-width: 130px;
+    }
+
+    .card-content {
+        max-width: 230px;
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
         display: block;
     }
 }
 
-/*Responssividade tablet*/
-@media (width <= 768px) {
+/*Responssividade tablet pequeno*/
+@media (min-width: 571px) and (max-width: 768px) {
     body {
         justify-content: start;
         
@@ -815,6 +849,14 @@ body {
         justify-content: center;
     }
 
+    .card-content-week {
+        max-width: 130px;
+    }
+
+    .card-content {
+        max-width: 230px;
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
         display: block;
@@ -827,7 +869,99 @@ body {
 
 }
 
+/*Responssividade tablet*/
+@media (min-width: 769px) and (max-width: 912px) {
+    body {
+        justify-content: start;
+    }
 
+    .sidebar {
+        width: 40%;
+        height: 100vh;
+    }
+
+    .card {
+        width: 60%;
+        padding: 50px;
+        justify-content: center;
+    }
+
+    .card-content-week {
+        max-width: 130px;
+    }
+
+    .card-content {
+        max-width: 230px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+    }
+
+    .baseboard {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/*Resonssividade tablet grande*/
+@media (min-width: 913px) and (max-width: 1024px) {
+    body {
+        justify-content: start;
+    }
+
+    .sidebar {
+        width: 35%;
+        height: 100vh;
+    }
+
+    .card {
+        gap: 100px;
+        width: 65%;
+        padding: 50px;
+        justify-content: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+    }
+
+    .baseboard {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/*Resonssividade tablet grande*/
+@media (min-width: 1025px) and (max-width: 1500px) {
+    body {
+        justify-content: start;
+    }
+
+    .sidebar {
+        width: 10px;
+        height: 100vh;
+    }
+
+    .card {
+        gap: 100px;
+        width: 65%;
+        padding: 50px;
+        justify-content: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+    }
+
+    .baseboard {
+        position: absolute;
+        bottom: 0;
+    }
+};
 
 
 
